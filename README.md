@@ -1,55 +1,73 @@
 # OSINT Intelligence Platform
 
-A modern web application built with Flask for Open Source Intelligence (OSINT) IP lookups. This tool gathers data from multiple public APIs to evaluate and visualize the risk level of any IPv4 address. It combines backend processing with a professionally designed frontend to deliver detailed and interactive intelligence reports.
+**Note:** This project was originally developed by [tarouka02/osint-app](https://github.com/tarouka02/osint-app).  
+This fork highlights my personal contributions to the **risk analysis and scoring algorithm**, which evaluates the threat level of IPv4 addresses using data from multiple intelligence sources.
 
 ---
 
-## Features
+## Project Overview
 
-- Geolocation, ASN, and organization details from **IPinfo**
-- Abuse reports, confidence scores, and threat history from **AbuseIPDB**
-- Threat analysis statistics from **VirusTotal**
-- Open ports, ISP, and hostnames from **Shodan**
-- Risk scoring algorithm based on aggregate threat signals
-- Animated loading screen and result transition
-- Professional landing page with:
-  - Typed headline animations (Typed.js)
-  - Slide-based API feature explanation (Swiper.js)
-  - Scroll animations (AOS.js)
-- Gradient titles, responsive layout, and interactive styling using Bootstrap 5 and custom CSS
+The OSINT Intelligence Platform is a web application built with Flask that automates the collection and analysis of open-source intelligence (OSINT) for IP addresses.  
+The platform aggregates data from several public APIs and generates a visual risk report to help analysts assess potential threats.  
+It features an interactive web interface and integrates multiple data points into a single, comprehensive dashboard.
 
 ---
 
-## Tech Stack
+## My Contribution
 
-**Backend:**
-- Python 3
-- Flask
+I developed the **Risk Analysis and Scoring System**, which performs the following:
+
+- Aggregates data from **VirusTotal**, **AbuseIPDB**, and **Shodan** APIs.  
+- Computes a **composite risk score** based on severity levels, confidence scores, and historical data.  
+- Implements a **weighted algorithm** that prioritizes reliable threat indicators.  
+- Designed a **color-coded risk display** for easier interpretation of results.  
+- Built error handling to maintain reliability during API rate limits or connection failures.
+
+This work transformed raw API outputs into actionable intelligence, improving both analytical accuracy and user experience.
+
+---
+
+## Key Features
+
+- Geolocation, ASN, and organization details from **IPinfo**  
+- Abuse reports, confidence scores, and threat history from **AbuseIPDB**  
+- Threat statistics and malware detections from **VirusTotal**  
+- Open ports, ISP, and hostnames from **Shodan**  
+- Integrated **risk scoring algorithm** combining multi-source signals  
+- Responsive web interface with a professional design  
+- Front-end enhancements (Typed.js, Swiper.js, AOS.js) for clarity and usability
+
+---
+
+## Technology Stack
+
+**Backend**
+- Python 3  
+- Flask  
 - Requests
 
-**Frontend:**
-- HTML5, CSS3
-- Bootstrap 5
-- Swiper.js (slide animations)
-- Typed.js (typing header animation)
+**Frontend**
+- HTML5, CSS3  
+- Bootstrap 5  
+- Swiper.js (slide animations)  
+- Typed.js (typing header animation)  
 - AOS.js (scroll-triggered animations)
 
-**External APIs Used:**
-- [IPinfo](https://ipinfo.io/)
-- [AbuseIPDB](https://abuseipdb.com/)
-- [VirusTotal](https://www.virustotal.com/)
-- [Shodan](https://www.shodan.io/)
+**External APIs**
+- IPinfo — https://ipinfo.io/  
+- AbuseIPDB — https://abuseipdb.com/  
+- VirusTotal — https://www.virustotal.com/  
+- Shodan — https://www.shodan.io/
 
 ---
 
 ## Setup Instructions
 
-### 1. Clone the repository
-
+### 1) Clone the repository
 ```bash
 git clone https://github.com/tarouka02/osint-app.git
 cd osint-app
-```
+
 
 ### 2. Create and activate a virtual environment
 
@@ -91,6 +109,4 @@ osint-intel-platform/
 ├── requirements.txt
 └── README.md
 ```
-
-
 
